@@ -6,12 +6,12 @@ def input_temperature(temp_str: str) -> int:
 
 
 def test_temperature() -> None:
-    number_input = input_temperature("25")
-    print(f"Input data is '{number_input}'")
-    print(f"Temperature is now {number_input}°C")
+    print("Input data is '25'")
+    input_temperature("25")
+    print("Temperature is now 25°C")
     print()
-    print("Input data is 'abc'") 
-    str_input = input_temperature("abc")
+    print("Input data is 'abc'")
+    input_temperature("abc")
 
 
 if __name__ == "__main__":
