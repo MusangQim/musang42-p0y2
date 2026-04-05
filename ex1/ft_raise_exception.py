@@ -1,0 +1,28 @@
+def input_temperature(temp_str) -> int:
+    try:
+        return int(temp_str)
+    except Exception as error:
+        print(f"Caught input_temperature error: {error}")
+
+
+def test_temperature() -> None:
+    print("Input data is '25'")
+    input_temperature('25')
+    print("Temperature is now 25°C")
+    print()
+    print("Input data is 'abc'")
+    input_temperature('abc')
+    print()
+    print("Input data is '100'")
+    input_temperature('100')
+    print()
+    print("Input data is '-50'")
+    input_temperature('-50')
+
+
+if __name__ == "__main__":
+    print("=== Garden Temperature Checker ===")
+    print()
+    test_temperature()
+    print()
+    print("All tests completed - program didn't crash!")
