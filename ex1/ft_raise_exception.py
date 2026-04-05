@@ -1,6 +1,11 @@
-def input_temperature(temp_str) -> int:
+def input_temperature(temp_str: str) -> int:
     try:
-        return int(temp_str)
+        tempinput = int(temp_str)
+        if tempinput < 0:
+            raise ValueError(f"{temp_str}°C is too cold for plants (min 0°C)")
+        elif tempinput > 40:
+            raise ValueError(f"{temp_str}°C is too hot for plants (max 40°C)")
+        return tempinput
     except Exception as error:
         print(f"Caught input_temperature error: {error}")
 
