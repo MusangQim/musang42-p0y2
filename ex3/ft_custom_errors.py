@@ -42,6 +42,7 @@ def test_all_error() -> None:
     except GardenError as error:
         print(f"Caught GardenError: {error}")
 
+
 if __name__ == "__main__":
     print("=== Custom Garden Errors Demo ===")
     print()
