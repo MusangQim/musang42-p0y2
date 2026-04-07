@@ -2,16 +2,12 @@ def garden_operations(operation_number: int) -> None:
     try:
         if operation_number == 0:
             int("abc")
-            #print("invalid literal for int() with base 10: 'abc'")
         elif operation_number == 1:
-            x = 1 / 0
-            #print("division by zero")
+            _ = 1 / 0
         elif operation_number == 2:
             open("/non/existent/file")
-            #print("[Errno 2] No such file or directory: '/non/existent/file'")
         elif operation_number == 3:
-            x = "hello" + 1
-            #print("can only concatenate str (not 'int') to str")
+            _ = "hello" + 1
         else:
             print("Operation completed successfully")
     except ValueError as a:
@@ -22,7 +18,7 @@ def garden_operations(operation_number: int) -> None:
         print(f"Caught FileNotFoundError: {c}")
     except TypeError as d:
         print(f"Caught TypeError: {d}")
-    
+
 
 def test_error_types() -> None:
     print("Testing operation 0...")
@@ -35,6 +31,7 @@ def test_error_types() -> None:
     garden_operations(3)
     print("Testing operation 4...")
     garden_operations(4)
+
 
 if __name__ == "__main__":
     print("=== Garden Error Types Demo ===")
