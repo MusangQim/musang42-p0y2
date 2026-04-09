@@ -19,7 +19,8 @@ def water_plant(plant_name: str) -> None:
     if plant_name == str.capitalize(plant_name):
         print(f"Watering {plant_name}: [OK]")
     else:
-        raise PlantError(f"Invalid plant_name to water: '{plant_name}'")
+        raise PlantError(f"Invalid plant name to water: '{plant_name}'")
+
 
 def test_watering_system(plants: list[str]) -> None:
     print("Opening watering system")
@@ -28,15 +29,18 @@ def test_watering_system(plants: list[str]) -> None:
             water_plant(each_plant)
     except PlantError as error:
         print(f"Caught PlantError: {error}")
-        print("...ending tests and returning to main")
+        print(".. ending tests and returning to main")
     finally:
         print("Closing watering system")
+
 
 if __name__ == "__main__":
     print("=== Garden Watering System ===")
     print()
+    print("Testing valid plants...")
     test_watering_system(["Tomato", "Lettuce", "Carrots"])
     print()
+    print("Testing invalid plants...")
     test_watering_system(["Tomato", "lettuce"])
     print()
     print("Cleanup always happens, even with errors!")
