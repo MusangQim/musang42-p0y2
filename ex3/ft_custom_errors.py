@@ -43,7 +43,7 @@ def test_all_error() -> None:
         print(f"Caught GardenError: {error}")
 
 
-def main():
+def main() -> None:
     print("=== Custom Garden Errors Demo ===")
     print()
     test_plant_error()
