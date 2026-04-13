@@ -35,7 +35,7 @@ def test_watering_system(plants: list[str]) -> None:
         print("Closing watering system")
 
 
-def main():
+def main() -> None:
     print("=== Garden Watering System ===")
     print()
     print("Testing valid plants...")
