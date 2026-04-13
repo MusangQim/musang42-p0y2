@@ -33,7 +33,7 @@ def test_error_types() -> None:
     garden_operations(4)
 
 
-def main():
+def main() -> None:
     print("=== Garden Error Types Demo ===")
     print()
     test_error_types()
