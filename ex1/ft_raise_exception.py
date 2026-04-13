@@ -27,7 +27,7 @@ def test_temperature() -> None:
     input_temperature('-50')
 
 
-def main():
+def main() -> None:
     print("=== Garden Temperature Checker ===")
     print()
     test_temperature()
