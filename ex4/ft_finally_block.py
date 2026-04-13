@@ -35,7 +35,7 @@ def test_watering_system(plants: list[str]) -> None:
         print("Closing watering system")
 
 
-if __name__ == "__main__":
+def main():
     print("=== Garden Watering System ===")
     print()
     print("Testing valid plants...")
@@ -45,3 +45,7 @@ if __name__ == "__main__":
     test_watering_system(["Tomato", "lettuce"])
     print()
     print("Cleanup always happens, even with errors!")
+
+
+if __name__ == "__main__":
+    main()
